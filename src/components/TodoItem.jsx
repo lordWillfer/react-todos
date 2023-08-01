@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Tooltip, Tag, List, Button, Popconfirm, Switch } from 'antd';
-import { CloseOutined, CheckOutlined } from '@ant-design/icons';
+import { CloseOutlined, CheckOutlined } from '@ant-design/icons';
 
 const Todo = ({ todo, onTodoRemoval, onTodoToggle }) => {
     return (
@@ -10,7 +10,7 @@ const Todo = ({ todo, onTodoRemoval, onTodoToggle }) => {
                 title = { todo.completed ? 'Mark as uncompleted' : 'Mark as completed' }>
                 <Switch 
                     checkedChildren = {<CheckOutlined />} 
-                    unCheckedChildren = {<CloseOulined />} 
+                    unCheckedChildren = {<CloseOutlined />} 
                     onChange={() => onTodoToggle(todo)}
                     defaultChecked={todo.completed}
                 />

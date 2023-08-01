@@ -8,7 +8,7 @@ export const getTodo = (id) => {
     return fetch(`${baseUrl}/${id}`).then((res) => res.json());
 }
 
-export const creteTodo = (todo) => {
+export const createTodo = (todo) => {
     return fetch(baseUrl, {
         method: 'POST',
         headers: {
@@ -22,7 +22,7 @@ export const creteTodo = (todo) => {
 };
 
 export const updateTodo = (todo) => {
-    return fetch(`${baseUrl}/{todo.id}`, {
+    return fetch(`${baseUrl}/${todo.id}`, {
         method: 'PUT',
         headers: {
             "Content-Type": "application/json"
@@ -36,7 +36,7 @@ export const updateTodo = (todo) => {
 };
 
 export const deleteTodo = (id) => {
-    return fetch(`${baseUrl}/{id}`, {
+    return fetch(`${baseUrl}/${id}`, {
         method: 'DELETE',
-    }).then(res => res.json());
+    });
 }
